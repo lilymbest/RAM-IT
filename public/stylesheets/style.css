@@ -1,0 +1,67 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #eae7dc;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  height: 10px;
+  width: 40%;
+}
+a:hover {
+  color: white;
+}
+
+nav {
+  display: grid;
+  background-color: #e98074;
+  height: 70px;
+  width: 100%;
+  margin-bottom: 0px;
+  grid-template-columns: 10vmin 25vmin auto 15vmin 15vmin 15vmin;
+}
+
+img {
+  display: grid;
+  width: 60px;
+  height: 45px;
+  align-self: center;
+  grid-column-start: 1;
+}
+
+h3 {
+  display: grid;
+  grid-column-start: 2;
+  align-self: center;
+  font-size: 22px;
+}
+
+section {
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100px 400px 200px;
+  grid-row-start: 2;
+  grid-column-gap: 25px;
+  margin-top: 25px;
+}
+
+div #tech {
+  display: grid;
+  grid-column-start: 1;
+  grid-row-start: 2;
+  align-self: center;
+}
+
+div #customer {
+  display: grid;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  align-self: center;
+}
+
+div {
+  display: grid;
+  grid-row-start: 2;
+}
