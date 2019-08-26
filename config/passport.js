@@ -1,6 +1,6 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-var Student = require('../models/Customer');
+var Customer = require('../models/Customer');
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -9,7 +9,7 @@ passport.use(new GoogleStrategy({
   },
 
   function(accessToken, refreshToken, profile, cb) {
-    Customer.findOne({'googleId' : profile.id }, function(err, student){
+    Customer.findOne({'googleId' : profile.id }, function(err, customer){
         if(err) return cb(err);
         if(customer) {
             return cb(null, customer);
@@ -33,7 +33,7 @@ passport.serializeUser(function(customer, done){
 });
 
 passport.deserializeUser(function(id, done){
-    Student.findById(id, function(err, customer){
+    Customer.findById(id, function(err, customer){
         done(err, customer);
     });
 });
