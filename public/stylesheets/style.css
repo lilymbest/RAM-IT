@@ -14,6 +14,9 @@ a {
   justify-self: center;
   margin-bottom: 20px;
   font-size: 20px;
+  background-color: #254e58;
+  border-radius: 23px;
+  padding: 10px;
 }
 
 a:hover {
@@ -23,13 +26,21 @@ a:hover {
 nav {
   display: grid;
   background-color: #7ec0ec;
-  height: 70px;
-  width: 100%;
-  margin-bottom: 0px;
+  position: fixed;
+  height: 100px;
+  top: 0;
+  right: 0;
+  left: 0;
   grid-template-columns: 10vmin 40vmin auto 15vmin 15vmin 15vmin;
-  border-radius: 20px;
 }
 
+img.comp {
+  margin-top: 40px;
+  height: 88.9%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
 img {
   display: grid;
   width: 60px;
@@ -70,11 +81,11 @@ div #customer {
 }
 
 div {
+  position: relative;
   display: grid;
   grid-row-start: 2;
-  /* border: 6px solid #E85A4F; */
   border-radius: 25px;
-  background-color: #7ec0ec;
+  background-color: #7ec0ecb6;
 }
 
 img.lock {
@@ -95,3 +106,75 @@ img.techIcon {
   width: 200px;
   height: 200px;
   }
+
+p {
+  font-size: 30px;
+  text-align: center;
+}
+
+section.techs {
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 100px 400px 200px;
+  grid-row-start: 2;
+  grid-column-gap: 25px;
+  margin-top: 25px;
+}
+
+div.tickets {
+  display: grid;
+  grid-row-start: 2;
+  border-radius: 25px;
+  background-color: #7ec0ec;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+div.other {
+  display: grid;
+  grid-row-start: 2;
+  border-radius: 25px;
+  background-color: #7ec0ec;
+}
+
+a.tickets {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+
+}
+
+img.assignment {
+  justify-self: center;
+  align-self: center;
+  width: inherit;
+  height: 100px;
+  margin: 0;
+}
+
+form#new-form {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  margin: 55px;
+  background-color: #7ec0ec;
+  padding: 10px;
+  border-radius: 23px;
+}
+
+label {
+  display: grid;
+  grid-column-start: 1;
+  margin-top: 6px;
+  justify-self: center;
+  align-self: center;
+}
+
+input {
+  display: grid;
+  grid-column-start: 2;
+  margin-top: 6px;
+  justify-self: center;
+  align-self: center;
+}

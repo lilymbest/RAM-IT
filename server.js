@@ -8,6 +8,7 @@ var passport = require('passport');
 
 var indexRouter = require('./routes/index');
 var techsRouter = require('./routes/techs');
+var cusRouter = require('./routes/customers')
 
 require('dotenv').config();
 
@@ -35,7 +36,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', indexRouter);
-app.use('/techs', techsRouter);
+app.use('/tech', techsRouter);
+app.use('/customers', cusRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

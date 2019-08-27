@@ -3,9 +3,11 @@ var Schema = mongoose.Schema;
 
 
 var customerSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    googleId: String
+    nameFirst: String,
+    nameLast: String,
+    zipCode: Number,
+    Address: String,
+    notes: String,
   }, {
     timestamps: true
   });
