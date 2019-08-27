@@ -2,18 +2,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var techInfoSchema = new mongoose.Schema({
-    date: {
-
-    },
-    timeSlots: {
-        enum: [],
-    },
-    zip: {
-        type: Number,
-        required: true,
-    },
-});
+    name: String,
+    email: String,
+    googleId: String,
+  }, {
+    timestamps: true
+  });
 
 
-module.exports = mongoose.model('Info', techInfoSchema);
+
+module.exports = mongoose.model('Tech', techInfoSchema);
 

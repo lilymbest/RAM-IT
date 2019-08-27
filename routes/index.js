@@ -1,10 +1,10 @@
-var router = require('express').Router();
+var express = require('express');
+var router = express.Router();
 var passport = require('passport');
-var fostersCtrl = require('../controllers/customers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', {user: req.user});
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -15,8 +15,8 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect: '/customer/index',
-    failureRedirect: '/',
+    successRedirect: '/tech/show',
+    failureRedirect: '/index',
   }
 ));
 

@@ -7,13 +7,13 @@ body {
 a {
   color: black;
   text-decoration: none;
-  height: 22px;
-  width: 30%;
+  height: 20px;
+  width: 50%;
   text-align: center;
   align-self: end;
   justify-self: center;
-  border: solid 3px black;
-  background-color: white;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 a:hover {
@@ -22,11 +22,12 @@ a:hover {
 
 nav {
   display: grid;
-  background-color: #e98074;
+  background-color: #7ec0ec;
   height: 70px;
   width: 100%;
   margin-bottom: 0px;
-  grid-template-columns: 10vmin 25vmin auto 15vmin 15vmin 15vmin;
+  grid-template-columns: 10vmin 40vmin auto 15vmin 15vmin 15vmin;
+  border-radius: 20px;
 }
 
 img {
@@ -34,6 +35,7 @@ img {
   width: 60px;
   height: 45px;
   align-self: center;
+  justify-self: center;
   grid-column-start: 1;
 }
 
@@ -41,7 +43,7 @@ h3 {
   display: grid;
   grid-column-start: 2;
   align-self: center;
-  font-size: 22px;
+  font-size: 23px;
 }
 
 section {
@@ -70,6 +72,26 @@ div #customer {
 div {
   display: grid;
   grid-row-start: 2;
-  border: 6px solid #E85A4F;
+  /* border: 6px solid #E85A4F; */
   border-radius: 25px;
+  background-color: #7ec0ec;
 }
+
+img.lock {
+  padding-top: 4px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+img.icon {
+justify-self: center;
+width: 200px;
+height: 200px;
+}
+
+img.techIcon {
+  justify-self: center;
+  width: 200px;
+  height: 200px;
+  }

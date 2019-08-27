@@ -1,6 +1,6 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
-var Customer = require('../models/Customer');
+var Tech = require('../models/Tech');
 
 passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
@@ -9,31 +9,32 @@ passport.use(new GoogleStrategy({
   },
 
   function(accessToken, refreshToken, profile, cb) {
-    Customer.findOne({'googleId' : profile.id }, function(err, customer){
+    Tech.findOne({'googleId' : profile.id }, function(err, tech){
         if(err) return cb(err);
-        if(customer) {
-            return cb(null, customer);
+        if(tech) {
+            return cb(null, tech);
         } else {
-            var newCustomer = new Customer({
+            var newTech = new Tech({
                 name: profile.displayName,
                 email: profile.emails[0].value,
-                googleId: profile.id
+                googleId: profile.id,
+                admin: true
             });
-            newCustomer.save(function(err){
+            newTech.save(function(err){
                 if(err) return cb(err);
-                return cb(null, newCustomer);
+                return cb(null, newTech);
             });
         }
     });
   }
 ));
 
-passport.serializeUser(function(customer, done){
-    done(null, customer.id);
+passport.serializeUser(function(tech, done){
+    done(null, tech.id);
 });
 
 passport.deserializeUser(function(id, done){
-    Customer.findById(id, function(err, customer){
-        done(err, customer);
+    Tech.findById(id, function(err, tech){
+        done(err, tech);
     });
 });
