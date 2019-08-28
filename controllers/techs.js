@@ -4,6 +4,8 @@ const Tech = require('../models/Tech')
 module.exports = {
     index,
     show,
+    delete: deleteOne,
+    resolve
 };
 
 function index(req, res){
@@ -24,3 +26,12 @@ function show(req, res) {
         res.send(err) // remove this in production
     })
   }
+
+  function deleteOne(id){
+    customers.splice(id, 1);
+    res.redirect('tech/tickets');
+}
+  function resolve(req, res) {
+    Cus.deleteOne(req.params.id);
+    res.redirect('tech/tickets');
+}
