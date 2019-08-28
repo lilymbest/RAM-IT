@@ -5,9 +5,12 @@ var Schema = mongoose.Schema;
 var customerSchema = new mongoose.Schema({
     nameFirst: String,
     nameLast: String,
-    zipCode: Number,
+    zipCode: String,
     Address: String,
     notes: String,
+    date: Date,
+    phone: String,
+    email: String,
   }, {
     timestamps: true
   });

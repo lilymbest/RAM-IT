@@ -1,3 +1,5 @@
-pseudo code
-// create a landing page with two logins that redirect
+## Remote Access Mobile IT
+### Pseudo code
+---
+* Create a landing page with two sides, one that redirects after login to the tech side and another to request a ticket
 

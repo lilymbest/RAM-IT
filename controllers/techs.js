@@ -1,4 +1,5 @@
-var Tech = require('../models/Tech');
+const Cus = require('../models/Customer');
+const Tech = require('../models/Tech')
 
 module.exports = {
     index,
@@ -13,9 +14,13 @@ function index(req, res){
         });
     });
 }
-  
-function show(req, res) {
-    Tech.findById(req.params.id, function(err, tech) {
-      res.render('tech/show', { title: 'Detail', tech });
-    });
+
+function show(req, res) { 
+    Cus.find({})
+    .then(customers => {
+        res.render('tech/tickets',{ customers })
+    })
+    .catch(err => {
+        res.send(err) // remove this in production
+    })
   }

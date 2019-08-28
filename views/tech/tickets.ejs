@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<table class="tickets" align="center">
+  <tbody>
+    <% customers.forEach(function(c) { %>
+     <tr>
+      <td><%= c.nameFirst %></td>
+       <td><%= c.nameLast %></td>
+       <td><%= c.phone %></td>
+       <td><%= c.email %></td>
+        <td><%= c.zipCode %></td>
+        <td><%= c.Address %></td>
+         <td><%= c.notes %></td>
+         <td><%= c.date %></td>
+    </tr>
+ <% }); %>
+</tbody>
+</table>
+]
+</body>
+</html>
