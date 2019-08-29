@@ -148,6 +148,14 @@ img.assignment {
   margin: 0;
 }
 
+div.form {
+  justify-content: center;
+  align-content: center;
+  justify-self: center;
+  align-self: center;
+  background-color: transparent;
+}
+
 form#new-form {
   position: relative;
   display: grid;
@@ -158,6 +166,8 @@ form#new-form {
   border-radius: 23px;
   height: 450px;
   width: 500px;
+  justify-items: center;
+  align-self: center;
 }
 
 label {
@@ -177,7 +187,7 @@ input {
 }
 
 table.tickets {
-  width: 100%;
+  width: 80%;
   height: 100%;
   position: relative;
   background-color: #7ec0ecb6;
@@ -188,7 +198,7 @@ table.tickets {
 td {
   border: 3px solid #254e58;
   color: black;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -211,4 +221,59 @@ a.tool {
 
 img.tool {
   margin-bottom: 10px;
+}
+
+section.ticket {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  width: 80%;
+  height: 100%;
+  position: relative;
+  background-color: #7ec0ecb6;
+  margin-top: 100px;
+  color: black;
+  justify-self: center;
+  align-self: center;
+}
+
+div#first {
+  display: grid;
+  background-color: transparent;
+  grid-row-start: 1;
+}
+
+div#last {
+  background-color: transparent;
+  grid-row-start: 2;
+}
+
+div#phone {
+  background-color: transparent;
+  grid-row-start: 3;
+}
+
+div#email {
+  background-color: transparent;
+  grid-row-start: 4;
+}
+
+div#zip {
+  background-color: transparent;
+  grid-row-start: 5;
+}
+
+div#add {
+  background-color: transparent;
+  grid-row-start: 6;
+}
+
+div#notes {
+  background-color: transparent;
+  grid-row-start: 7;
+}
+
+div#status {
+  background-color: transparent;
+  grid-row-start: 8;
 }

@@ -10,7 +10,7 @@ var customerSchema = new mongoose.Schema({
     notes: String,
     date: Date,
     phone: String,
-    email: String,
+    email: String
   }, {
     timestamps: true
   });

@@ -11,6 +11,11 @@
 
 * Allow techs to "resolve" (delete) a ticket.
 ---
+### Stretch Goals
+---
+* Allow Techs to have a clock in page to keep track of how many hours they've worked in that day
+* Allow customers to see their submitted ticket for confirmation
+---
 ### User Stories
 ---
 * As a tech I would like to login and be able to see all incoming customer tickets
@@ -25,4 +30,5 @@
 * Node.js
 * Express Genorator
 * MongoDB
+
 

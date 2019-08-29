@@ -4,8 +4,8 @@ const Tech = require('../models/Tech')
 module.exports = {
     index,
     show,
-    delete: deleteOne,
-    resolve
+    delete: resolve,
+    clock,
 };
 
 function index(req, res){
@@ -25,13 +25,37 @@ function show(req, res) {
     .catch(err => {
         res.send(err) // remove this in production
     })
-  }
-
-  function deleteOne(id){
-    customers.splice(id, 1);
-    res.redirect('tech/tickets');
 }
-  function resolve(req, res) {
-    Cus.deleteOne(req.params.id);
-    res.redirect('tech/tickets');
+
+function resolve(req, res, next) { 
+    Cus.find({})
+    .then(customers => {
+        req.customers.splice(req.body);
+        req.customers.save(function(err) {
+        if(err) return next(err);
+        res.redirect('tech/tickets');
+    })
+    .catch(err => {
+        res.send(err) // remove this in production
+    })
+    })
+}
+
+
+// function resolve(req, res, next) {
+//     req.customers.splice(req.body);
+//     req.customers.save(function(err) {
+//       if(err) return next(err);
+//       res.redirect('tech/tickets');
+//     });
+//   }
+
+function clock(req, res){
+    Tech.find({})
+    .then(techs => {
+        res.render('tech/clock',{ techs })
+    })
+    .catch(err => {
+        res.send(err) // remove this in production
+    })
 }

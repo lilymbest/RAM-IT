@@ -19,7 +19,7 @@
         <td><%= c.zipCode %></td>
         <td><%= c.Address %></td>
          <td><%= c.notes %></td>
-         <td><form action="/<%= idx %>?_method=DELETE" class="delete-form" method="POST">
+         <td><form action="tickets/c._<%= idx %>?_method=DELETE" class="delete-form" method="POST">
             <button type="submit"><Datag>Resolve Ticket</Datag></button>
           </form></td>
     </tr>

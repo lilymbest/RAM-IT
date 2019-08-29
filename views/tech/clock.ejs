@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<div class="clock">
+    <script> document.querySelector('.clockIn').addEventListener('click', function(){
+        techs.clock === !techs.clock
+        return techs.clock
+    });
+   </script>
+
+    <% if (techs.clock === !techs.clock) { %>
+            <button class="clockOut">Clock Out</button>
+            <% click(); %>
+    <% } else { %>
+            <button class="clockIn">Clock In</button>
+     <% } %>           
+</div>

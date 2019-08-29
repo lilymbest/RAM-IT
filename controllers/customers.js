@@ -8,8 +8,16 @@ module.exports = {
 };
   
 function index(req, res){
-  res.render('customers/index');
+  Customer.find({})
+  .then(customers => {
+    let last1 = customers.slice(-1)
+      res.render('customers/index',{ customers: last1 })
+  })
+  .catch(err => {
+      res.send(err) // remove this in production
+  })
 }
+
 
 function newTicket(req, res) {
   res.render('customers/new')
@@ -28,3 +36,4 @@ function create(req, res) {
 function getAll() {
   return Customer.find({})
 }
+
