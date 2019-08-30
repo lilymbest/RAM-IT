@@ -22,8 +22,7 @@
 ---
 * Allow Techs to have a clock in page to keep track of how many hours they've worked in that day
 * Allow customers to see their submitted ticket for confirmation
-* Allow Customers to edit their information while viewing their ticket
-* 
+* Allow Customers to edit their information after viewing their ticket
 ---
 ### User Stories
 ---
