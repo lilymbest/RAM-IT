@@ -1,15 +1,12 @@
 <%- include('../partials/header') %>
+<div class="clockPage">
+<h1>00:00</h1>
 <div class="clock">
-    <script> document.querySelector('.clockIn').addEventListener('click', function(){
-        techs.clock === !techs.clock
-        return techs.clock
-    });
-   </script>
-
-    <% if (techs.clock === !techs.clock) { %>
-            <button class="clockOut">Clock Out</button>
-            <% click(); %>
-    <% } else { %>
-            <button class="clockIn">Clock In</button>
-     <% } %>           
+    <% if (user) {%>
+        <button id="clockOut">Clock Out</button>
+     <% } else { %>
+        <button id="clockIn">Clock In</button>
+    <% } %>
+           
+</div>
 </div>

@@ -20,40 +20,25 @@ function index(req, res){
 function show(req, res) { 
     Cus.find({})
     .then(customers => {
-        res.render('tech/tickets',{ customers })
+        res.render('tech/tickets',{ customers, user: req.user })
     })
     .catch(err => {
         res.send(err) // remove this in production
     })
 }
 
-function resolve(req, res, next) { 
-    Cus.find({})
-    .then(customers => {
-        req.customers.splice(req.body);
-        req.customers.save(function(err) {
-        if(err) return next(err);
-        res.redirect('tech/tickets');
+
+function resolve(req, res, next) {
+    Cus.findByIdAndRemove(req.params.id, function(err){
+        Cus.remove();
     })
-    .catch(err => {
-        res.send(err) // remove this in production
-    })
-    })
+    res.redirect('/tech/tickets')
 }
-
-
-// function resolve(req, res, next) {
-//     req.customers.splice(req.body);
-//     req.customers.save(function(err) {
-//       if(err) return next(err);
-//       res.redirect('tech/tickets');
-//     });
-//   }
 
 function clock(req, res){
     Tech.find({})
     .then(techs => {
-        res.render('tech/clock',{ techs })
+        res.render('tech/clock',{ user: req.user })
     })
     .catch(err => {
         res.send(err) // remove this in production

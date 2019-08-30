@@ -11,7 +11,7 @@ function index(req, res){
   Customer.find({})
   .then(customers => {
     let last1 = customers.slice(-1)
-      res.render('customers/index',{ customers: last1 })
+      res.render('customers/index',{ customers: last1, user: req.user })
   })
   .catch(err => {
       res.send(err) // remove this in production
@@ -20,7 +20,7 @@ function index(req, res){
 
 
 function newTicket(req, res) {
-  res.render('customers/new')
+  res.render('customers/new', {user: req.user})
 }
 
 function create(req, res) {

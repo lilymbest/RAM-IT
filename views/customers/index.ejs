@@ -1,21 +1,14 @@
 <%- include('../partials/header') %>
-<section class="ticket">
+<div align="center" class="center">
+<section class="ticket" align="center">
         <% customers.forEach(function(c, idx) { %>
-        <div id="first">First</div>
         <div id="first"><%= c.nameFirst %></div>
-        <div id="last">Last</div>
         <div id="last"><%= c.nameLast %></div>
-        <div id="phone">Contact Number</div>
         <div id="phone"><%= c.phone %></div>
-        <div id="email">Email </div>
         <div id="email"><%= c.email %></div>
-        <div id="zip">Zip</div>
         <div id="zip"><%= c.zipCode %></div>
-        <div id="add">Address</div>
-        <div id="add"><%= c.address %></div>
-        <div id="notes">Notes</div>
+        <div id="add"><%= c.Address %></div>
         <div id="notes"><%= c.notes %></div>
-        <div id="status">Status</div>
-        <div id="status">Pending</div>
         <% }); %>
 </section>
+</div>

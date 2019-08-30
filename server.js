@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var passport = require('passport');
+var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var techsRouter = require('./routes/techs');
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client')))
 app.use(session({
   secret: 'SEIRocks!',
   resave: false,
@@ -34,6 +36,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/tech', techsRouter);

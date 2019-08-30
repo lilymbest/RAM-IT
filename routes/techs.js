@@ -3,7 +3,7 @@ var techCtrl = require('../controllers/techs');
 
 router.get('/', isLoggedIn, techCtrl.index);
 router.get('/tickets', isLoggedIn, techCtrl.show);
-router.get('/clock', isLoggedIn, techCtrl.clock);
+router.get('/clock', techCtrl.clock);
 router.delete('/tickets/:id', isLoggedIn, techCtrl.delete);
 
 function isLoggedIn(req, res, next) {
