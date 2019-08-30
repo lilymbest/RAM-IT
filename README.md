@@ -41,6 +41,7 @@
 * Node.js
 * Express Genorator
 * MongoDB
+* Google+ API
 ---
 ### Deployed Link
 ---
