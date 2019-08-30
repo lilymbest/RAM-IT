@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+<div class="edit">
+<form action="<%= customers._id %>?_method=PUT" align="center" class="edit" method="POST">
+    <label>First Name:</label>
+    <input value="<% customers.nameFirst %>" type="text" name="nameFirst" size="35" autocomplete="off">
+    <label>Last Name:</label>
+    <input value="<% customers.nameLast %>" type="text" name="nameLast" size="35" autocomplete="off">
+    <label>Phone Number:</label>
+    <input type="text" name="phone" size="35" autocomplete="off">
+    <label>Email:</label>
+    <input type="text" name="email" size="35" autocomplete="off">
+    <label>Zip:</label>
+    <input type="text" name="zipCode" size="35" autocomplete="off">
+    <label>Address:</label>
+    <input type="text" name="Address" size="35" autocomplete="off">
+    <label>Date:</label>
+    <input type="date" id="start" name="date">
+    <label>Detialed<br>Description<br>of Isuue:</label>
+    <textarea name="notes"></textarea>
+    <input type="submit" value="Update Information">
+  </form>
+</form>
+</div>

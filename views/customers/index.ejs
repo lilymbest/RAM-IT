@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <div align="center" class="center">
 <section class="ticket" align="center">
-        <% customers.forEach(function(c, idx) { %>
+        <% customers.forEach(function(c, id) { %>
         <div id="first"><%= c.nameFirst %></div>
         <div id="last"><%= c.nameLast %></div>
         <div id="phone"><%= c.phone %></div>
@@ -9,6 +9,7 @@
         <div id="zip"><%= c.zipCode %></div>
         <div id="add"><%= c.Address %></div>
         <div id="notes"><%= c.notes %></div>
+        <a href="index/<%= c._id %>/edit">Edit Information</a>
         <% }); %>
 </section>
 </div>

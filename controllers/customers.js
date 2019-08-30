@@ -5,6 +5,8 @@ module.exports = {
   index,
   create,
   getAll,
+  update,
+  edit,
 };
   
 function index(req, res){
@@ -37,3 +39,16 @@ function getAll() {
   return Customer.find({})
 }
 
+function update(req, res) {
+  Customer.findByIdAndUpdate(req.params.id, req.body, function(err, customers) {
+    customers.save(function(err) {
+      res.redirect("customers/index/:id", customers);
+    });
+  });
+}
+
+function edit(req, res) {
+    Customer.findById(req.params.id, function(err, customers) {
+      res.render("customers/edit", { customers, user: req.user });
+    });
+}

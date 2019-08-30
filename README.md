@@ -1,4 +1,10 @@
 ## Remote Access Mobile IT
+![WireFrame](public/images/wireframe3.png)
+
+![RAM](public/images/screenshot5.png)
+
+![RAM](public/images/screenshot20.png)
+
 
 ---
 ### Pseudo code
@@ -7,7 +13,8 @@
 
 * Allow only techs to view pending tickets from customers
 
-* Make it so when you click the wrench at the top it redirects to different home pages depending on if you're loged in as a tech or not.
+* Can't access other tickets
+ if you're not logged in as a tech.
 
 * Allow techs to "resolve" (delete) a ticket.
 ---
@@ -15,6 +22,8 @@
 ---
 * Allow Techs to have a clock in page to keep track of how many hours they've worked in that day
 * Allow customers to see their submitted ticket for confirmation
+* Allow Customers to edit their information while viewing their ticket
+* 
 ---
 ### User Stories
 ---
@@ -30,5 +39,8 @@
 * Node.js
 * Express Genorator
 * MongoDB
-
+---
+### Deployed Link
+---
+https://ram-it.herokuapp.com/
 
