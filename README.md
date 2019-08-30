@@ -27,9 +27,11 @@
 ---
 ### User Stories
 ---
-* As a tech I would like to login and be able to see all incoming customer tickets
+* AAU I would like to login and be able to see all incoming customer tickets
 
-* As a customer I would like to be able to input all my information and have a ticket submited instantly
+* AAU I would like to be able to input all my information and have a ticket submited instantly
+
+* AAU I would like to be able to edit my information after submitting a tickets
 ---
 ### Technologies Used
 ---

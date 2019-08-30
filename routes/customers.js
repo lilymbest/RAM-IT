@@ -6,6 +6,6 @@ router.get('/index', customersCtrl.index); //path : /customers/
 router.get('/new', customersCtrl.new);
 router.post('/index', customersCtrl.create);
 router.get('/index/:id/edit', customersCtrl.edit)
-router.put('/index/:id', customersCtrl.update)
+router.put('/index', customersCtrl.update)
 
 module.exports = router;
